@@ -3,87 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Re.Gu.Ma Design | 3D Printing & Recycling</title>
+    <title>Re.Gu.Ma Design | Eco-Innovation Palermo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2d5a6e; /* Il verde petrolio del logo */
-            --accent: #d36d41;  /* L'arancio del logo */
-            --dark: #1a1a1a;
-            --light: #f4f4f4;
+            --primary: #2d5a6e; 
+            --accent: #d36d41;  
+            --bg-light: #ffffff;
+            --bg-section: #f8f9fa;
+            --text: #2d3436;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); color: var(--dark); }
-        header { background: white; padding: 2rem; text-align: center; border-bottom: 3px solid var(--primary); }
-        header img { max-width: 250px; }
-        
-        nav { sticky: top; background: white; padding: 1rem; text-align: center; }
-        nav a { margin: 0 15px; text-decoration: none; color: var(--primary); font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
 
-        .hero { padding: 4rem 2rem; text-align: center; background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://www.transparenttextures.com/patterns/recycled-paper.png'); }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 2rem; max-width: 1200px; margin: auto; }
-        .category-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; text-align: center; padding-bottom: 1.5rem; }
-        .category-card:hover { transform: translateY(-5px); }
-        .category-card img { width: 100%; height: 200px; object-fit: cover; background: #eee; }
-        .category-card h3 { color: var(--primary); margin: 1rem 0; }
-        
-        .btn { background: var(--accent); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            margin: 0; 
+            background: var(--bg-light); 
+            color: var(--text); 
+            line-height: 1.6;
+        }
 
-        .newsletter { background: var(--primary); color: white; padding: 3rem; text-align: center; }
-        .newsletter input { padding: 10px; width: 250px; border: none; border-radius: 5px; }
+        nav { 
+            position: sticky; 
+            top: 0; 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(10px);
+            padding: 1.2rem; 
+            text-align: center; 
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        nav a { 
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: var(--text); 
+            font-weight: 600; 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+        nav a:hover { color: var(--accent); }
+
+        header { padding: 5rem 2rem; text-align: center; background: white; }
+        header img { max-width: 280px; margin-bottom: 1.5rem; transition: transform 0.5s ease; }
+        header img:hover { transform: scale(1.05); }
+        header p { font-weight: 300; color: var(--primary); font-size: 1.2rem; letter-spacing: 2px; }
+
+        .about-section { padding: 6rem 2rem; background: var(--bg-section); text-align: center; }
+        .about-content { max-width: 800px; margin: auto; }
+        .about-content h2 { color: var(--primary); font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .about-content p { font-size: 1.1rem; color: #636e72; margin-bottom: 2rem; }
+
+        .section-title { text-align: center; margin-top: 5rem; font-size: 2rem; color: var(--primary); }
         
-        footer { padding: 2rem; text-align: center; font-size: 0.8rem; }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 40px; 
+            padding: 4rem 2rem; 
+            max-width: 1300px; 
+            margin: auto; 
+        }
+
+        .category-card { 
+            background: white; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+            transition: var(--transition); 
+            text-align: center; 
+            padding-bottom: 2rem; 
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        .category-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+        .category-card img { width: 100%; height: 250px; object-fit: cover; transition: 0.5s; }
+        .category-card h3 { color: var(--primary); margin: 1.5rem 0 0.5rem; font-size: 1.5rem; }
+        .category-card p { color: #b2bec3; padding: 0 2rem; margin-bottom: 1.5rem; }
+        
+        .btn { 
+            background: var(--primary); 
+            color: white; 
+            padding: 12px 30px; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-weight: 600; 
+            display: inline-block;
+            transition: var(--transition);
+        }
+        .btn:hover { background: var(--accent); transform: scale(1.05); }
+
+        .newsletter { background: var(--primary); color: white; padding: 6rem 2rem; text-align: center; margin-top: 4rem; }
+        .newsletter input { padding: 15px 25px; width: 100%; max-width: 350px; border: none; border-radius: 30px; margin-bottom: 1rem; outline: none; }
+        
+        footer { padding: 5rem 2rem; text-align: center; background: white; border-top: 1px solid #eee; }
+        .footer-contacts { margin-bottom: 2rem; }
+        .footer-contacts a { color: var(--primary); text-decoration: none; font-weight: bold; margin: 0 15px; transition: 0.3s; }
+        .footer-contacts a:hover { color: var(--accent); }
+        .social-links { margin-bottom: 1rem; font-size: 0.9rem; color: #555; font-weight: bold; letter-spacing: 1px; }
     </style>
 </head>
 <body>
 
-<header>
-    <img src="logo.png" alt="Re.Gu.Ma Design Logo">
-    <p>Design Sostenibile da Plastica Riciclata | Made in Palermo</p>
-</header>
-
 <nav>
-    <a href="#ufficio">Ufficio</a>
-    <a href="#gioielli">Gioielli</a>
-    <a href="#gaming">Gaming</a>
-    <a href="#auto">Auto</a>
-    <a href="#elettronica">Elettronica</a>
-    <a href="#casa">Casa</a>
+    <a href="#about">Storia</a>
+    <a href="#prodotti">Prodotti</a>
+    <a href="#contatti">Contatti</a>
+    <a href="https://www.instagram.com/re.gu.ma_design/" target="_blank">Instagram</a>
 </nav>
 
-<section class="hero">
-    <h1>Oggetti unici stampati in 3D per te</h1>
-    <p>Siamo due studenti di Palermo. Trasformiamo rifiuti in design su commissione.</p>
+<header>
+    <img src="logo.png" alt="Re.Gu.Ma Design Logo">
+    <p>RECYCLE. DESIGN. MANUFACTURE.</p>
+</header>
+
+<section id="about" class="about-section">
+    <div class="about-content">
+        <h2>Dall'Università al Futuro</h2>
+        <p>
+            Siamo una coppia di studenti di Palermo con una missione chiara: dimostrare che la plastica non è un rifiuto, ma una risorsa preziosa. Utilizzando tecnologie di stampa 3D e materiali 100% riciclati, creiamo oggetti di design che uniscono estetica siciliana e innovazione tecnologica. Ogni pezzo Re.Gu.Ma è unico, sostenibile e progettato per durare.
+        </p>
+    </div>
 </section>
 
-<div class="grid">
-    <div class="category-card" id="ufficio">
-        <img src="https://via.placeholder.com/400x300?text=Ufficio" alt="Ufficio">
-        <h3>Sezione Ufficio</h3>
-        <p>Organizer e accessori scrivania.</p>
-        <a href="IL_TUO_LINK_STRIPE_O_TALLY" class="btn">Ordina Commissione</a>
+<div id="prodotti">
+    <h2 class="section-title">Le Nostre Collezioni</h2>
+    <div class="grid">
+        <div class="category-card"><img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=500"><h3>Ufficio</h3><p>Organizer funzionali.</p><a href="mailto:reguma.design@gmail.com" class="btn">Richiedi</a></div>
+        <div class="category-card"><img src="https://images.unsplash.com/photo-1535633302704-b02f4f1a90bc?auto=format&fit=crop&w=500"><h3>Gioielli</h3><p>Eco-bijoux leggeri.</p><a href="mailto:reguma.design@gmail.com" class="btn">Scegli</a></div>
+        <div class="category-card"><img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=500"><h3>Gaming</h3><p>Supporti custom.</p><a href="mailto:reguma.design@gmail.com" class="btn">Configura</a></div>
     </div>
-
-    <div class="category-card" id="gioielli">
-        <img src="https://via.placeholder.com/400x300?text=Gioielli" alt="Gioielli">
-        <h3>Sezione Gioielli</h3>
-        <p>Eco-bijoux leggeri e resistenti.</p>
-        <a href="#" class="btn">Ordina Commissione</a>
-    </div>
-
-    </div>
+</div>
 
 <section class="newsletter">
-    <h2>Unisciti alla rivoluzione circolare</h2>
-    <p>Iscriviti per vedere i nuovi prototipi e ricevere offerte.</p>
-    <form>
-        <input type="email" placeholder="La tua email..." required>
-        <button type="submit" class="btn" style="border:none; cursor:pointer;">Iscriviti</button>
-    </form>
+    <h2>Entra nella Community</h2>
+    <p>Iscriviti per ricevere aggiornamenti sulle nostre nuove produzioni.</p>
+    <form><input type="email" placeholder="Indirizzo Email" required><br><button type="submit" class="btn" style="border:none; cursor:pointer; background: var(--accent);">Iscriviti Ora</button></form>
 </section>
 
-<footer>
-    &copy; 2024 Re.Gu.Ma Design - Creato con amore a Palermo.
+<footer id="contatti">
+    <div class="social-links">CONTATTACI PER PROGETTI PERSONALIZZATI</div>
+    <div class="footer-contacts">
+        <a href="mailto:reguma.design@gmail.com">reguma.design@gmail.com</a>
+        <a href="https://www.instagram.com/re.gu.ma_design/" target="_blank">Instagram</a>
+    </div>
+    <div style="font-size: 0.8rem; color: #999;">&copy; 2026 Re.Gu.Ma Design - Palermo, Sicilia</div>
 </footer>
 
 </body>
