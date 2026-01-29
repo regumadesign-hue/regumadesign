@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re.Gu.Ma Design | 3D Printing & Recycling</title>
+    <style>
+        :root {
+            --primary: #2d5a6e; /* Il verde petrolio del logo */
+            --accent: #d36d41;  /* L'arancio del logo */
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); color: var(--dark); }
+        header { background: white; padding: 2rem; text-align: center; border-bottom: 3px solid var(--primary); }
+        header img { max-width: 250px; }
+        
+        nav { sticky: top; background: white; padding: 1rem; text-align: center; }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--primary); font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+
+        .hero { padding: 4rem 2rem; text-align: center; background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://www.transparenttextures.com/patterns/recycled-paper.png'); }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 2rem; max-width: 1200px; margin: auto; }
+        .category-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; text-align: center; padding-bottom: 1.5rem; }
+        .category-card:hover { transform: translateY(-5px); }
+        .category-card img { width: 100%; height: 200px; object-fit: cover; background: #eee; }
+        .category-card h3 { color: var(--primary); margin: 1rem 0; }
+        
+        .btn { background: var(--accent); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; }
+
+        .newsletter { background: var(--primary); color: white; padding: 3rem; text-align: center; }
+        .newsletter input { padding: 10px; width: 250px; border: none; border-radius: 5px; }
+        
+        footer { padding: 2rem; text-align: center; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Re.Gu.Ma Design Logo">
+    <p>Design Sostenibile da Plastica Riciclata | Made in Palermo</p>
+</header>
+
+<nav>
+    <a href="#ufficio">Ufficio</a>
+    <a href="#gioielli">Gioielli</a>
+    <a href="#gaming">Gaming</a>
+    <a href="#auto">Auto</a>
+    <a href="#elettronica">Elettronica</a>
+    <a href="#casa">Casa</a>
+</nav>
+
+<section class="hero">
+    <h1>Oggetti unici stampati in 3D per te</h1>
+    <p>Siamo due studenti di Palermo. Trasformiamo rifiuti in design su commissione.</p>
+</section>
+
+<div class="grid">
+    <div class="category-card" id="ufficio">
+        <img src="https://via.placeholder.com/400x300?text=Ufficio" alt="Ufficio">
+        <h3>Sezione Ufficio</h3>
+        <p>Organizer e accessori scrivania.</p>
+        <a href="IL_TUO_LINK_STRIPE_O_TALLY" class="btn">Ordina Commissione</a>
+    </div>
+
+    <div class="category-card" id="gioielli">
+        <img src="https://via.placeholder.com/400x300?text=Gioielli" alt="Gioielli">
+        <h3>Sezione Gioielli</h3>
+        <p>Eco-bijoux leggeri e resistenti.</p>
+        <a href="#" class="btn">Ordina Commissione</a>
+    </div>
+
+    </div>
+
+<section class="newsletter">
+    <h2>Unisciti alla rivoluzione circolare</h2>
+    <p>Iscriviti per vedere i nuovi prototipi e ricevere offerte.</p>
+    <form>
+        <input type="email" placeholder="La tua email..." required>
+        <button type="submit" class="btn" style="border:none; cursor:pointer;">Iscriviti</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2024 Re.Gu.Ma Design - Creato con amore a Palermo.
+</footer>
+
+</body>
+</html>
